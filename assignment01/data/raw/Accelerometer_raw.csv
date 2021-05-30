@@ -1,4 +1,4 @@
-"Time (s)","Acceleration x (m/s^2)","Acceleration y (m/s^2)","Acceleration z (m/s^2)","Absolute acceleration (m/s^2)"
+Time (s),Acceleration x (m/s^2),Acceleration y (m/s^2),Acceleration z (m/s^2),Absolute acceleration (m/s^2)
 2.529609700E-2,-4.929214716E-1,4.970191956E0,8.412266731E0,9.783251566E0
 2.769979500E-2,-5.144568682E-1,4.970191956E0,8.414659500E0,9.786417549E0
 3.010193100E-2,-5.168496966E-1,4.955834866E0,8.419445992E0,9.783378947E0

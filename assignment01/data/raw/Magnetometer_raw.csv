@@ -1,4 +1,4 @@
-"Time (s)","Magnetic Field x (µT)","Magnetic Field y (µT)","Magnetic Field z (µT)","Absolute field (µT)"
+Time (s),Magnetic Field x (µT),Magnetic Field y (µT),Magnetic Field z (µT),Absolute field (µT)
 3.880153000E-2,3.240319824E1,-1.367619991E1,-3.124419975E1,4.704472041E1
 4.915423900E-2,3.234220123E1,-1.327359962E1,-3.100020027E1,4.672492744E1
 5.915423900E-2,3.239099884E1,-1.313939953E1,-3.087819862E1,4.663993757E1

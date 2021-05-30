@@ -1,4 +1,4 @@
-"Time (s)","Gyroscope x (rad/s)","Gyroscope y (rad/s)","Gyroscope z (rad/s)","Absolute (rad/s)"
+Time (s),Gyroscope x (rad/s),Gyroscope y (rad/s),Gyroscope z (rad/s),Absolute (rad/s)
 1.070284060E-1,-1.099525020E-2,2.128802687E-1,-2.748812735E-1,3.478485574E-1
 1.094310620E-1,-3.665083647E-2,1.994416267E-1,-2.895416021E-1,3.534891591E-1
 1.118330410E-1,-6.108472496E-2,1.908897758E-1,-3.042019308E-1,3.642925538E-1
