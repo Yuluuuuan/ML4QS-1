@@ -1,4 +1,16 @@
 import pandas as pd
+from datetime import datetime
+
+def UTC_to_wall_time(datapth, timecol):
+    # Obtain the data from the file
+    data = pd.read_csv(datapth)
+
+    dt = datetime.fromtimestamp(data[timecol].index.astype(int) / 1000000000)
+    s = dt.strftime('%d/%m/%Y %H:%M:%S %p')
+    data[timecol] = s
+    
+    return data
+
 
 def convert_timestemp(datapth, timepth, timecol):
     
@@ -36,6 +48,13 @@ def main():
     mag.to_csv(rawdatapth + "Magnetometer.csv", index=False)
 
 
+def main2():
+    rawdatapth = "data/raw/"
+    outputpth = "data/intermediate/"
+    timecol = "Time (s)"
+
+    acc = UTC_to_wall_time(rawdatapth + "Accelerometer.csv", timecol)
+    acc.to_csv(rawdatapth + "Accelerometer_UTC.csv", index=False)
 
 if __name__ == "__main__":
     main()
