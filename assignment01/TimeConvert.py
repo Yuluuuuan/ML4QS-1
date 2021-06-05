@@ -5,7 +5,7 @@ def UTC_to_wall_time(datapth, timecol):
     # Obtain the data from the file
     data = pd.read_csv(datapth)
 
-    dt = datetime.fromtimestamp(data[timecol].index.astype(int) / 1000000000)
+    dt = datetime.fromtimestamp(data[timecol].astype(int) // 1000000000)
     s = dt.strftime('%d/%m/%Y %H:%M:%S %p')
     data[timecol] = s
     
@@ -53,9 +53,9 @@ def main2():
     outputpth = "data/intermediate/"
     timecol = "Time (s)"
 
-    acc = UTC_to_wall_time(rawdatapth + "Accelerometer.csv", timecol)
-    acc.to_csv(rawdatapth + "Accelerometer_UTC.csv", index=False)
+    acc = UTC_to_wall_time(rawdatapth + "Accelerometer_index.csv", timecol)
+    acc.to_csv(rawdatapth + "Accelerometer_UTC.csv", index=True)
 
 if __name__ == "__main__":
-    main()
+    main2()
 
