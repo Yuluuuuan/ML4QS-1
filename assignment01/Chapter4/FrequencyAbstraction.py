@@ -10,6 +10,7 @@
 import numpy as np
 import pandas as pd
 
+
 # This class performs a Fourier transformation on the data to find frequencies that occur
 # often and filter noise.
 class FourierTransformation:
@@ -63,6 +64,9 @@ class FourierTransformation:
             collist.append(col + '_max_freq')
             collist.append(col + '_freq_weighted')
             collist.append(col + '_pse')
+
+            # TODO: new freq
+            
             
             collist = collist + [col + '_freq_' +
                     str(freq) + '_Hz_ws_' + str(window_size) for freq in self.freqs]

@@ -57,5 +57,5 @@ def main2():
     acc.to_csv(rawdatapth + "Accelerometer_UTC.csv", index=True)
 
 if __name__ == "__main__":
-    main2()
+    main()
 

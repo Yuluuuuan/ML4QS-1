@@ -51,8 +51,11 @@ class NumericalAbstraction:
             return data.rolling(window, min_periods=window_size).std()
         elif aggregation_function == 'slope':
             return data.rolling(window, min_periods=window_size).apply(self.get_slope)
-        
         #TODO: add your own aggregation function here
+        elif aggregation_function == "sum":
+            return data.rolling(window, min_periods=window_size).sum()
+        elif aggregation_function == "cnt":
+            return data.rolling(window, min_periods=window_size).count()
         else:
             return np.nan
 
