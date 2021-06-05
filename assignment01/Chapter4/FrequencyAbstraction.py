@@ -34,11 +34,16 @@ class FourierTransformation:
         max_freq = self.freqs[np.argmax(real_ampl[0:len(real_ampl)])]
         # weigthed
         freq_weigthed = float(np.sum(self.freqs * real_ampl)) / np.sum(real_ampl)
-
+        # min
+        min_freq = self.freqs[np.argmin(real_ampl[0:len(real_ampl)])]
+        # var
+        var_freq = float(np.var(real_ampl))
         # pse
 
         PSD = np.divide(np.square(real_ampl), float(len(real_ampl)))
         PSD_pdf = np.divide(PSD, np.sum(PSD))
+
+        
 
         # Make sure there are no zeros.
         if np.count_nonzero(PSD_pdf) == PSD_pdf.size:
@@ -48,6 +53,8 @@ class FourierTransformation:
 
         real_ampl = np.insert(real_ampl, 0, max_freq)
         real_ampl = np.insert(real_ampl, 0, freq_weigthed)
+        real_ampl = np.insert(real_ampl, 0, min_freq)
+        real_ampl = np.insert(real_ampl, 0, var_freq)
         row = np.insert(real_ampl, 0, pse)
 
         self.temp_list.append(row)
@@ -63,9 +70,13 @@ class FourierTransformation:
             # prepare column names
             collist.append(col + '_max_freq')
             collist.append(col + '_freq_weighted')
+            collist.append(col + '_min_freq')
+            collist.append(col + '_var_freq')
             collist.append(col + '_pse')
 
             # TODO: new freq
+            
+            
             
             
             collist = collist + [col + '_freq_' +
